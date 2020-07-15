@@ -1,4 +1,4 @@
-# react-quick-sns
+# rails-quick-youtube
 ## `Ruby on Rails + jQuery CDN Youtube Clone in 30 Minutes`
 
 ## Tech Stack
