@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailsQuickYoutube</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <a href="/" class="navbar-brand">
+        <%= fa_icon "youtube-play", class: "text-danger mr-1" %>
+        JohnTube
+      </a>
+      <%= form_tag videos_path, method: :get, class: "form-inline" do %>
+        <%= text_field_tag :q, params[:q], class: "form-control mr-2" %>
+        <%= submit_tag "search", class: "btn btn-danger" %>
+      <% end %>
+      <div>
+        <% if current_user %>
+          <%= link_to "upload", new_video_path, class: "btn btn-outline-primary" %>
+          <%= link_to "logout", destroy_user_session_path, method: :delete, class: "btn btn-outline-primary" %>
+        <% else %>
+          <%= link_to "login", new_user_session_path, class: "btn btn-outline-danger" %>
+          <%= link_to "signup", new_user_registration_path, class: "btn btn-outline-danger" %>
+        <% end %>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="card">
+        <div class="card-body">
+             <%= yield %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
