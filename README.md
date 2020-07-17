@@ -1,4 +1,7 @@
 # rails-quick-youtube
+## `Ruby on Railsの公式文書を読んで、30分で作成するYoutube Cloneです。`
+## `どのようなサーバ側のフレームワークでも、原理は似ているので、私が早く適応することを示すために作りました。`
+
 ## `Ruby on Rails + jQuery CDN Youtube Clone in 30 Minutes`
 
 ## Tech Stack
