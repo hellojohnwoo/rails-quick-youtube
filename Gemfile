@@ -28,7 +28,7 @@ gem 'devise', '~> 4.2'
 
 gem 'bootstrap', '~> 4.5'
 gem 'font-awesome-rails'
-gem 'carrierwave', '~> 2.1.0'
+gem 'carrierwave', '~> 2.1.1'
 gem 'kaminari', '~> 1.2.1'
 
 
